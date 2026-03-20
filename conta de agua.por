@@ -1,4 +1,4 @@
-programa {
+programa {questao 5
   funcao inicio() {
     
 real r1, r2, r3
