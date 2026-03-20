@@ -1,4 +1,4 @@
-programa {
+programa {questao 1
   funcao inicio() {
     real valor1, valor2, valor3, media
 
