@@ -1,4 +1,4 @@
-programa {
+programa {questao 4
   funcao inicio() {
     real salario
     real kw
