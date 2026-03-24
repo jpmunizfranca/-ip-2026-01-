@@ -19,7 +19,7 @@ func main() {
 	} else if a == b || b == c || a == c {
 	fmt.Println("Esse triângulo é isósceles.")
 	} else { 
-	fmt.Println("Esse trinângulo é escaleno.")
+	fmt.Println("Esse triângulo é escaleno.")
 	}
 	
 	
