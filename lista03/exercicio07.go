@@ -23,7 +23,7 @@ func main() {
 
 		soma += x
 
-		// maior e menor
+		
 		if primeiro {
 			maior = x
 			menor = x
