@@ -1,0 +1,60 @@
+# Variáveis de Ambiente
+.env
+.env.local
+.env.*.local
+
+# Binários Go compilados
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Diretórios de build do Go
+/bin/
+/dist/
+/build/
+
+# Arquivos de teste do Go
+*.test
+*.out
+
+# Dependências do Go
+vendor/
+go.work
+
+# IDEs e Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.bak
+*.log
+
+# Arquivos específicos do Windows
+.exe
+desktop.ini
+
+# Arquivos específicos do macOS
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE específicas
+*.sublime-project
+*.sublime-workspace
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Diretórios de node_modules (se usar Node.js no futuro)
+node_modules/

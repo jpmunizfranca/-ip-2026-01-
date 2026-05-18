@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Pacientes - CRUD Hospital</title>
+    <link rel="stylesheet" href="styles/listar.style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <div id="header">
+                <h1>Lista de Pacientes Registrados</h1>
+                <a href="menu.html" class="btn-voltar">← Voltar ao Menu</a>
+            </div>
+
+            {{if .}}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>Data Nascimento</th>
+                            <th>Telefone</th>
+                            <th>Email</th>
+                            <th>Data Internação</th>
+                            <th>Hora Internação</th>
+                            <th>Motivo</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .}}
+                        <tr>
+                            <td>{{.ID}}</td>
+                            <td>{{.NomeCompleto}}</td>
+                            <td>{{.CPF}}</td>
+                            <td>{{.DataNascimento}}</td>
+                            <td>{{.Telefone}}</td>
+                            <td>{{.Email}}</td>
+                            <td>{{.DataInternacao}}</td>
+                            <td>{{.HoraInternacao}}</td>
+                            <td>{{.MotivoInternacao}}</td>
+                            <td>
+                                <a href="/editar?id={{.ID}}" class="btn-editar">Editar</a>
+                                <form method="POST" action="/deletar" style="display:inline;">
+                                    <input type="hidden" name="id" value="{{.ID}}">
+                                    <button type="submit" class="btn-deletar" onclick="return confirm('Tem certeza que deseja deletar este paciente?')">Deletar</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            {{else}}
+                <div id="no-data">
+                    <p>Nenhum paciente registrado ainda.</p>
+                    <a href="forms/registrar.html" class="btn-registrar">Registrar Primeiro Paciente</a>
+                </div>
+            {{end}}
+        </div>
+    </div>
+</body>
+</html>
